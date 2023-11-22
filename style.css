@@ -15,6 +15,15 @@ html, body{
   width: 100%;
 }
 
+#cursor{
+  height: 150px;
+  width: 150px;
+  background-color: gray;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0);
+}
+
 #page1{
   min-height: 100vh;
   width: 100%;
@@ -72,8 +81,11 @@ html, body{
 #page2 .element{
   height: 100%;
   width: 30%;
-  /* background-color: blue; */
   overflow: hidden;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 #page2 .element img{
@@ -83,8 +95,70 @@ html, body{
   scale: 1.2;
 }
 
+#page2 .element .box{
+  height: 50px;
+  width: 80%;
+  position: absolute;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.536);
+  border-radius: 20px;
+}
+
 #page3{
   width:100%;
-  height: 100vh;
-  background-color: aquamarine;
+  min-height: 120vh;
+  /* background-color: #f7f7f7; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.child{
+  height: 55vh;
+  width: 40vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child img{
+  height: 100%;
+}
+
+
+/******************** midea screens *******************/
+
+@media (max-width:600px){
+
+  #page1 h1 {
+    font-family: futura;
+    font-size: 7vh;
+    text-transform: uppercase;
+    line-height: 8vh;
+    letter-spacing: -6px;
+  }
+
+  #video-container {
+    width: 100%;
+    height: 25vh;
+  }
+
+  #page1 {
+    min-height: 60vh;
+    width: 100%;
+    position: relative;
+    padding: 1vh;
+    padding-top: 25vh;
+  }
+
+  #page2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh 2vw;
+    flex-direction: column;
+  }
 }
